@@ -16,5 +16,9 @@ type Note struct {
 	Tags       []string  `json:"tags"`
 }
 
-type NoteInterface struct {
+type NoteRepository interface {
+	InsertNote(note Note) error
+	SetFavoriteNote(id int) error
+	ArchiveNote(id int) error
+	DeleteNote(id int) error
 }

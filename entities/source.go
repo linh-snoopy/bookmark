@@ -12,3 +12,8 @@ type Source struct {
 	CreatedAt  time.Time `json:"created_at"`
 	UpdatedAt  time.Time `json:"updated_at"`
 }
+
+type SourceRepository interface {
+	InsertSource(source Source) error
+	UpdateSource(source Source) error
+}

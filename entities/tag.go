@@ -10,3 +10,8 @@ type Tag struct {
 	Name      string    `json:"name"`
 	CreatedAt time.Time `json:"created_at"`
 }
+
+type TagRepository interface {
+	InsertTag(name string) bool
+	DeleteTag(id int) bool 
+}

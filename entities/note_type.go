@@ -13,3 +13,7 @@ type NoteType struct {
 // articles
 // videos
 // images
+
+type NoteTypeRepository interface {
+	InsertNoteType(name string) error
+}

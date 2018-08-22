@@ -10,3 +10,9 @@ type User struct {
 	Password  string    `json:"password"`
 	CreatedAt time.Time `json:"created_at"`
 }
+
+type UserRepository interface {
+	InsertUser(email, password string) error
+	UpdatePassword(password string) error
+	DeleteUser(id int) error 
+}
